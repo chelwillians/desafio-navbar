@@ -1,0 +1,97 @@
+body{
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav{
+    height: 70px;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    transition: background 1s;
+}
+
+nav.ativo{
+    background-color: cadetblue;
+}
+
+nav.ativo span{
+    background-color: #fff;
+}
+
+.menu{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    transition: transform 1s;
+}
+
+.menu.ativo{
+    transform: translateY(0);
+}
+
+.menu a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu a:hover{
+    text-decoration: underline; 
+}
+
+.menuHamburguer{
+    margin-right: 15px;
+    width: 35px;
+    height: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+    transition: margin 1s;
+}
+
+.menuHamburguer span{
+    transition: background 1s, transform 1s;
+    width: 90%;
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+    transform-origin: 0% 100%;
+}
+
+.menuHamburguer.ativo{
+    margin-top: 8px;
+}
+
+.menuHamburguer.ativo span:nth-child(1){
+    transform-origin: 0% 100%;
+    transform: rotate(40deg) translate(-2px, -1px);  
+    
+}
+
+.menuHamburguer.ativo span:nth-child(2){
+    transform: scale(0, 0);
+}
+
+.menuHamburguer.ativo span:nth-child(3){
+    transform-origin: 0% 100%;
+    transform: rotate(-45deg) translate(5px, -2px);
+}
+
+@media(max-width: 768px){
+    nav{
+        justify-content: space-between;
+        background-color: transparent;
+    }
+
+    .menu{
+        margin-left: 15px;
+        transform: translateY(-100vh);
+    }
+
+    .menuHamburguer{
+        display: flex;
+    }
+}
