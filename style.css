@@ -95,3 +95,9 @@ nav.ativo span{
         display: flex;
     }
 }
+
+@media(max-width:500px){
+    .menu{
+        width: 70%;
+    }
+}
